@@ -14,17 +14,32 @@ $q8 = $_POST["Q8"];
 $q9 = $_POST["Q9"];
 $q10 = $_POST["Q10"];
 
-echo $q1;
-echo $q2;
-echo $q3; 
-echo $q4; 
-echo $q5;
-echo $q6;
-echo $q7; 
-echo $q8; 
-echo $q9; 
-echo $q10;
 
+$total = $q1+$q2+$q3+$q4+$q5+$q6+$q7+$q8+$q9+$q10;
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>診断結果</h1>
+
+    <?php if ($total <= 3) {
+        echo "あなたのサイコパス度は30%です。";
+    } elseif ($total <= 6) {
+        echo "あなたのサイコパス度は60%です。";
+    } elseif ($total <= 9) {
+        echo "あなたのサイコパス度は90%です。";
+    } elseif ($total <= 10) {
+        echo "あなたのサイコパス度は100%です。";
+    }?>
+    
+</body>
+</html>
